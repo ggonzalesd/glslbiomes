@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>PC 2</title>
+		<link href="css/cg.css" rel="stylesheet">
+		
+		<style>
+			.section_name{
+				color: white;
+				background-color: #67f36c80;
+				font-size: large;
+				text-align: center;
+				margin-bottom: 4px;
+			}
+			.options{
+				position: fixed;
+				width: 380px;
+			}
+			button {
+				background-color: #67f36c80;
+				border: none;
+				color: white;
+				padding: 10px 10px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+			}
+			.slidecontainer {
+			width: 100%; /* Width of the outside container */
+			}
+
+			/* The slider itself */
+			.slider {
+				-webkit-appearance: none; 
+				appearance: none;
+				width: 100%;
+				height: 25px;
+				background: #d3d3d3;
+				outline: none;
+				opacity: 0.7;
+				-webkit-transition: .2s;
+				transition: opacity .2s;
+			}
+
+			/* Mouse-over effects */
+			.slider:hover {
+				opacity: 1; /* Fully shown on mouse-over */
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="options">
+			<div>
+				<p class="section_name">Biomas</p>
+				<button id="b_volcan">Volcan</button>
+				<button id="b_tundra">Tundra</button>
+				<button id="b_monta">Montaña</button>
+				<button id="b_playa">Playa</button>
+				<button id="b_bosque">Bosque</button>
+			</div>
+			<div class="slidecontainer">
+				<p class="section_name">DirLight Power</p>
+
+				<span>Ambient</span>
+				<input name="dlp_r" type="range" min="0" max="100" value="20" class="slider" id="dirambient_ranger">
+				<span>Diffuse</span>
+				<input name="dlp_r" type="range" min="0" max="100" value="20" class="slider" id="dirpower_ranger">
+				<span>Specular</span>
+				<input name="dlp_r" type="range" min="0" max="100" value="20" class="slider" id="dirspecular_ranger">
+			</div>
+		</div>
+		<canvas id="canvitas"></canvas>	
+		<script src="/js/noise.js"></script>
+		<script type="module" src="/js/main-project.js"></script>
+	</body>
+</html>
