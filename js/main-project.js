@@ -158,7 +158,7 @@ async function main(){
 	const stoneMaterial = await cg.loadMaterialTextures(gl, {
 		ambient: [1, 1, 1],
 		diffuse: [0.9, 0.85, 0.85],
-		diffuseMap: "texture/redstone.jpg",
+		diffuseMap: "../texture/redstone.jpg",
 		secondMap: "texture/lava.jpg",
 		emissive: [0, 0, 0],
 		illum: 2,
@@ -168,8 +168,8 @@ async function main(){
 		specular: [1.0, 0.8, 0.8],
 		second: 3,
 		second_b: 20,
-		specularMap: "texture/redstone_spec.jpg",
-		secondspecMap: "texture/lava_spec.jpg",
+		specularMap: "../texture/redstone_spec.jpg",
+		secondspecMap: "../texture/lava_spec.jpg",
 	});
 	const stonePerlin = (j, i, position) => {
 		const n1 = noise.perlin2((j+position[0])*.1, (i+position[2])*.1)*.5 + .5;
@@ -181,8 +181,8 @@ async function main(){
 	const praderaMaterial = await cg.loadMaterialTextures(gl, {
 		ambient: [1, 1, 1],
 		diffuse: [0.9, 0.85, 0.85],
-		diffuseMap: "texture/stone.jpg",
-		secondMap: "texture/grass2.jpeg",
+		diffuseMap: "../texture/stone.jpg",
+		secondMap: "../texture/grass2.jpeg",
 		emissive: [0, 0, 0],
 		illum: 2,
 		opacity: 1,
@@ -191,8 +191,8 @@ async function main(){
 		specular: [1.0, 0.8, 0.8],
 		second: 1.8,
 		second_b: 1,
-		specularMap: "texture/stone_spec.jpg",
-		secondspecMap: "texture/grass2_spec.jpeg"
+		specularMap: "../texture/stone_spec.jpg",
+		secondspecMap: "../texture/grass2_spec.jpeg"
 	});
 	const praderaPerlin = (j, i, position) => {
 		const n1 = noise.perlin2((j+position[0])*.2, (i+position[2])*.2)*.5 + .5;
@@ -204,8 +204,8 @@ async function main(){
 	const mountainMaterial = await cg.loadMaterialTextures(gl, {
 		ambient: [1, 1, 1],
 		diffuse: [0.9, 0.85, 0.85],
-		diffuseMap: "texture/snow.jpeg",
-		secondMap: "texture/stone2.jpg",
+		diffuseMap: "../texture/snow.jpeg",
+		secondMap: "../texture/stone2.jpg",
 		emissive: [0, 0, 0],
 		illum: 2,
 		opacity: 1,
@@ -214,8 +214,8 @@ async function main(){
 		specular: [1.0, 0.8, 0.8],
 		second: 2,
 		second_b: 1,
-		specularMap: "texture/snow_spec.jpeg",
-		secondspecMap: "texture/stone2_spec.jpg"
+		specularMap: "../texture/snow_spec.jpeg",
+		secondspecMap: "../texture/stone2_spec.jpg"
 	});
 	const mountainPerlin = (j, i, position) => {
 		const n1 = noise.perlin2((j+position[0]+10)*.2, (i+position[2]-1)*.2)*.5 + .5;
@@ -227,8 +227,8 @@ async function main(){
 	const sandMaterial = await cg.loadMaterialTextures(gl, {
 		ambient: [1, 1, 1],
 		diffuse: [0.9, 0.85, 0.85],
-		diffuseMap: "texture/sand.jpg",
-		secondMap: "texture/water.jpg",
+		diffuseMap: "../texture/sand.jpg",
+		secondMap: "../texture/water.jpg",
 		emissive: [0, 0, 0],
 		illum: 2,
 		opacity: 1,
@@ -237,8 +237,8 @@ async function main(){
 		specular: [1.0, 0.8, 0.8],
 		second: 1.8,
 		second_b: 1.3,
-		specularMap: "texture/sand_spec.jpg",
-		secondspecMap: "texture/water_spec.jpg"
+		specularMap: "../texture/sand_spec.jpg",
+		secondspecMap: "../texture/water_spec.jpg"
 	});
 	const sandPerlin = (j, i, position) => {
 		const n1 = noise.perlin2((j+position[0])*.07, (i+position[2])*.07)*.5 + .5;
@@ -251,8 +251,8 @@ async function main(){
 	const forestMaterial = await cg.loadMaterialTextures(gl, {
 		ambient: [1, 1, 1],
 		diffuse: [0.9, 0.85, 0.85],
-		diffuseMap: "texture/forest.jpg",
-		secondMap: "texture/water.jpg",
+		diffuseMap: "../texture/forest.jpg",
+		secondMap: "../texture/water.jpg",
 		emissive: [0, 0, 0],
 		illum: 2,
 		opacity: 1,
@@ -261,8 +261,8 @@ async function main(){
 		specular: [1.0, 0.8, 0.8],
 		second: 1,
 		second_b: 1,
-		specularMap: "texture/forest_spec.jpg",
-		secondspecMap: "texture/water_spec.jpg"
+		specularMap: "../texture/forest_spec.jpg",
+		secondspecMap: "../texture/water_spec.jpg"
 	});
 	const forestPerlin = (j, i, position) => {
 		const n1 = noise.perlin2((j+position[0]+30)*.07, (i+position[2])*.07)*.5 + .5;
@@ -280,7 +280,7 @@ async function main(){
 	}, (m)=>{
 		m4.translate(m.transform, m.transform, [Math.random()*2, m.hmax, Math.random()*2]);
 	});
-	const objPla = await cg.loadObj("objects/asteroid/asteroid.obj", gl, objPrgInf, pTransf.transforms);
+	const objPla = await cg.loadObj("../objects/asteroid/asteroid.obj", gl, objPrgInf, pTransf.transforms);
 
 	const cam = new cg.Cam([-1.84, 4.14, 1.68], 4, canvitas);
 	cam.yaw = -0.7037963267943794;
